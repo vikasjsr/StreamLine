@@ -12,10 +12,25 @@ const Newsboard = ({category}) => {
    
   },[category])
 
+       const dummyNews = [
+    {
+      title: "Sample News 1",
+      description: "This is a dummy news description.",
+      urlToImage: "https://via.placeholder.com/150",
+      url: "#",
+    },
+    {
+      title: "Sample News 2",
+      description: "Another dummy news description.",
+      urlToImage: "https://via.placeholder.com/150",
+      url: "#",
+    },
+  ];
+
   return (
     <div>
       <h2 className = "text-center">Latest <span className ="badge bg-danger">News</span></h2>
-      {articles.map((news,index)=>{
+      {dummyNews.map((news,index)=>{
         return<NewsItem key = {index} title = {news.title} description = {news.description} src = {news.urlToImage} url = {news.url} />
       })}
     </div>
